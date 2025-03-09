@@ -9,19 +9,19 @@ k = 256
 
 # Zig-Zag Sort
 def f(n):
-    return 2 * 2 * 10**4 * n * np.log2(n) * (4*k-2)
+    return 2 * 2 * 10**4 * n * np.log2(n) * (4*k-2) +n
 
 # Bitonic Sort
 def j(n):
-    return 2 * (4*k-2) * ((n) / 4) * np.log2(n) * (np.log2(n) + 1)
+    return 2 * (4*k-2) * ((n) / 4) * np.log2(n) * (np.log2(n) + 1) +n 
 
 # Permutation network
 def g(n):
-    return 3 * (n * np.log2(n) - n + 1)
+    return 3 * (n * np.log2(n) - n + 1) +n
 
 # Butterfly network
 def h(n):
-    return 3 * ((n) / 2) * np.log2(n)
+    return 3 * ((n) / 2) * np.log2(n)+n
 
 
 # Generate a range of n values (n starts at 2 to avoid log(0))
@@ -53,4 +53,6 @@ formatter = FuncFormatter(lambda x, pos: f'{int(x):,}'.replace(',', '.'))
 plt.gca().xaxis.set_major_formatter(formatter)
 
 plt.grid(True)
-plt.show()
+# plt.show()
+
+plt.savefig('plot_proof_size_comparison.png', dpi=1200)

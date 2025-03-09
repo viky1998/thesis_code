@@ -5,14 +5,14 @@ from matplotlib.ticker import FuncFormatter
 
 # Define the functions
 def g(n):
-    return 3 * (n * np.log2(n) - n + 1)
+    return 3 * (n * np.log2(n) - n + 1) +n
 
 def h(n):
-    return 3 * ((n) / 2) * np.log2(n)
+    return 3 * ((n) / 2) * np.log2(n) +n
 
 # the number of additional stages is set to log2(n)/2
 def i(n):
-    return 3 * ((n) / 2) * (np.log2(n)+np.log2(n)/2)
+    return 3 * ((n) / 2) * (np.log2(n)+np.log2(n)/2) +n
 
 # Generate a range of n values (n starts at 32 to scale the plot)
 n = np.linspace(32, 500000, 1000000)
@@ -41,4 +41,6 @@ formatter = FuncFormatter(lambda x, pos: f'{int(x):,}'.replace(',', '.'))
 plt.gca().xaxis.set_major_formatter(formatter)
 
 plt.grid(True)
-plt.show()
+# plt.show()
+
+plt.savefig('plot_proof_size_comparison_extended.png', dpi=1200)
