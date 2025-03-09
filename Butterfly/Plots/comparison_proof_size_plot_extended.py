@@ -31,7 +31,7 @@ plt.plot(n, log_i, label='Extended Butterfly Network', color='m')
 # Label the axes
 plt.xlabel('Number of inputs n')
 plt.ylabel('Proof Size')
-plt.title('Proof Size Comparison')
+# plt.title('Proof Size Comparison')
 
 # Create a legend box
 plt.legend(loc='lower right')
