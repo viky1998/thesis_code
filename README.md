@@ -1,4 +1,4 @@
-# Thesis Code Repository
+# Switching Networks Analysis
 
 This repository contains the code for the master's thesis titled "More Efficient
 Zero-Knowledge Arguments for the Correctness of a Shuffle" by Viktoria Chiara
