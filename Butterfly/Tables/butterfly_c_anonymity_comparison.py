@@ -2,8 +2,8 @@ from butterfly import Butterfly
 butterfly = Butterfly()
 
 # Set the ranges for N and l
-N_range = range(5, 20)
-l_range = range(1, 20)
+N_range = range(5, 10)
+l_range = range(1, 10)
 
 # Calculate the comparison values of c for each N and l
 df_anonymity_comparison = butterfly.get_table_c_anonymity_comparison(N_range, l_range)
